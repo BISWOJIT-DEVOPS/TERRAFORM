@@ -16,6 +16,13 @@ Name = var.instance_names[count.index]
 variable "instance_names" {
 default = ["jenkins",  "tomcat-1", "tomcat-2", "Monitoring server"]
 }
+
+variable "AWS_ACCESS_KEY_ID" {
+  description = "AWS Access Key ID"
+  type        = string
+  sensitive   = true  # Prevent logging of sensitive values
+}
+
 variable "AWS_SECRET_ACCESS_KEY" {
   description = "AWS Secret Access Key"
   type        = string
