@@ -3,7 +3,7 @@ region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-count = 5
+count = 4
 ami = "ami-0166fe664262f664c"
 instance_type = "t2.micro"
 key_name = "raja123"
@@ -14,7 +14,7 @@ Name = var.instance_names[count.index]
 }
 
 variable "instance_names" {
-default = ["ANSIBLE",  "DEV-1", "DEV-2", "TEST-1", "TEST-2"]
+default = ["JENKINS",  "TOMCAT-1", "TOMCAT-2", "MONITER",]
 }
 
 variable "AWS_ACCESS_KEY_ID" {
